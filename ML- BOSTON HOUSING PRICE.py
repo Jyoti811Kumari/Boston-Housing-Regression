@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Scikit-learn ML tools
 from sklearn.datasets import fetch_openml
@@ -55,13 +56,19 @@ sns.histplot(data["MEDV"], kde=True)
 plt.title("Distribution of Median House Value (MEDV)")
 plt.xlabel("MEDV")
 plt.ylabel("Frequency")
+plt.tight_layout()
+plt.savefig(os.path.join(script_dir, "medv_distribution.png"), dpi=300, bbox_inches="tight")
 plt.show()
+plt.close()
 
 # Correlation matrix
 plt.figure(figsize=(12, 8))
 sns.heatmap(data.corr(numeric_only=True), annot=True, fmt=".2f")
 plt.title("Correlation Matrix")
+plt.tight_layout()
+plt.savefig(os.path.join(script_dir, "correlation_matrix.png"), dpi=300, bbox_inches="tight")
 plt.show()
+plt.close()
 
 # Correlation of features with target
 target_corr = data.corr(numeric_only=True)["MEDV"].sort_values(ascending=False)
@@ -151,7 +158,10 @@ plt.xlabel("Features")
 plt.ylabel("Importance")
 plt.xticks(rotation=45)
 plt.tight_layout()
+plt.tight_layout()
+plt.savefig(os.path.join(script_dir, "feature_importance.png"), dpi=300, bbox_inches="tight")
 plt.show()
+plt.close()
 
 # Model Interpretation
 
@@ -198,19 +208,19 @@ df_results = df_results.sort_values(by="RMSE", ascending=True)
 
 print(df_results)
 
-
 # Plot Example (Random Forest Predicted vs Actual)
 
-plt.figure(figsize=(6,6))
+plt.figure(figsize=(6, 6))
 plt.scatter(y_test, rf_pred, alpha=0.6)
 plt.xlabel("Actual MEDV")
 plt.ylabel("Predicted MEDV")
 plt.title("Random Forest: Actual vs Predicted")
-plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--')
+plt.plot( [y_test.min(), y_test.max()], [y_test.min(), y_test.max()], "r--" )
+plt.tight_layout()
+plt.savefig( os.path.join(script_dir, "rf_actual_vs_predicted.png"), dpi=300, bbox_inches="tight")
 plt.show()
-print("Plot generated")
-plt.savefig("rf_actual_vs_predicted.png")
 plt.close()
+print("Plot generated and saved.")
 
 # Export Results to CSV/Excel 
 
