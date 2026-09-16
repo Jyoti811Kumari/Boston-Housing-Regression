@@ -151,18 +151,14 @@ In this project, it is used primarily for **educational purposes and demonstrati
 
 ## Key Takeaways
 
-This project demonstrates an end-to-end machine learning regression workflow covering:
+This project demonstrates the ability to:
 
-* Exploratory data analysis
-* Data preprocessing
-* Feature scaling
-* Multiple regression techniques
-* Model evaluation
-* Model comparison
-* Ensemble learning
-* Feature importance analysis
-* Data visualization
-* Exporting analytical results
+* Build an end-to-end regression machine learning pipeline using Python and Scikit-learn.
+* Compare different modelling approaches, including linear, regularized, tree-based, ensemble, and neural-network models.
+* Evaluate regression models using **RMSE, MAE, and R²** rather than relying on a single performance measure.
+* Use exploratory analysis and correlation analysis to understand relationships within the dataset before modelling.
+* Interpret a machine learning model using **Random Forest feature importance**.
+* Translate model outputs into visualizations and structured CSV/Excel results for analysis and reporting.
+* Organize a reproducible machine learning project with documented dependencies and a clear workflow.
 
-It provides practical experience with **Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, regression modelling, and model evaluation**.
 
