@@ -62,19 +62,42 @@ Random Forest Feature Importance
 
 The project generates:
 
-* A model comparison table containing RMSE, MAE, and R² for all models
-* A Random Forest actual-vs-predicted plot
-* Random Forest feature importance values
-* CSV and Excel files containing model performance results
+- A model comparison table containing RMSE, MAE, and R² for all models
+- MEDV distribution visualization
+- Correlation matrix visualization
+- Random Forest feature importance visualization
+- Random Forest actual-vs-predicted visualization
+- CSV and Excel files containing model performance results
+
+## Visualizations
+
+### 1. MEDV Distribution
+
+![MEDV Distribution](medv_distribution.png)
+
+### 2. Correlation Matrix
+
+![Correlation Matrix](correlation_matrix.png)
+
+### 3. Random Forest Feature Importance
+
+![Feature Importance](feature_importance.png)
+
+### 4. Random Forest Actual vs Predicted
+
+![Actual vs Predicted](rf_actual_vs_predicted.png)
 
 ## Project Files
 
-* `ml_regression.py` – Main Python script containing the complete analysis and machine learning workflow
-* `boston_housing_model_results.csv` – Model comparison results
-* `boston_housing_model_results.xlsx` – Model comparison results in Excel format
-* `rf_actual_vs_predicted.png` – Random Forest actual-vs-predicted visualization
-* `requirements.txt` – Python libraries required to run the project
-* `.gitignore` – Files excluded from Git version control
+- `ML- BOSTON HOUSING PRICE.py` – Main Python script containing the complete analysis and machine learning workflow
+- `boston_housing_model_results.csv` – Model comparison results
+- `boston_housing_model_results.xlsx` – Model comparison results in Excel format
+- `medv_distribution.png` – Distribution of median house value (MEDV)
+- `correlation_matrix.png` – Correlation matrix of the dataset variables
+- `feature_importance.png` – Random Forest feature importance visualization
+- `rf_actual_vs_predicted.png` – Random Forest actual-vs-predicted visualization
+- `requirements.txt` – Python libraries required to run the project
+- `.gitignore` – Files excluded from Git version control
 
 ## Dataset
 
